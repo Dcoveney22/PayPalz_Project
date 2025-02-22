@@ -1,0 +1,8 @@
+#sumDisplay {
+  justify-content: center;
+  height: 11rem;
+  font-size: 10rem;
+  font-weight: 800;
+  color: var(--pp-yellow);
+  margin: 0rem 0rem 1rem 0rem;
+}

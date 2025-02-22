@@ -1,0 +1,32 @@
+.centerContainer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.mainContainer {
+  height: fit-content;
+  margin: auto;
+}
+
+form {
+  display: grid;
+}
+
+.loginInput {
+  border: 0;
+  margin: 2rem;
+  height: 4rem;
+  width: 20rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 100;
+  background-color: white;
+  color: black;
+}
+
+.loginButton {
+  margin: 2rem;
+  width: 20rem;
+  background-color: var(--pp-yellow);
+}

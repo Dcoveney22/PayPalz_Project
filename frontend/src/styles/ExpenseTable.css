@@ -1,0 +1,18 @@
+table {
+  margin: auto;
+  margin-top: 2rem;
+}
+
+td,
+th {
+  padding: 0 2rem;
+  text-align: left;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+th {
+  color: var(--pp-yellow);
+}

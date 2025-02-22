@@ -1,0 +1,4 @@
+GET http://localhost:3000/groups?username=user-Jayden
+Content-Type: application/json
+
+###

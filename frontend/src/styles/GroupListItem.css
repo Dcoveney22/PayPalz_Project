@@ -1,0 +1,12 @@
+.groupListItem {
+  color: var(--pp-yellow);
+  width: 50%;
+  margin: 2rem auto;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.groupListItem:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}

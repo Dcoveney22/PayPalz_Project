@@ -1,0 +1,46 @@
+.card {
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 1rem;
+  background-color: white;
+  width: 30rem;
+  height: 20rem;
+  border-radius: 2.4rem;
+  box-shadow: var(--pp-box-shadow);
+}
+
+.profilePhoto {
+  width: 8rem;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: var(--pp-box-shadow);
+}
+
+.profilePhoto:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.addExpenseButton {
+  margin: 2rem;
+  grid-column: span 2;
+}
+
+.label {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  display: block;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.sumLabel {
+  font-weight: 800;
+}
+
+.nameLabel {
+  color: black;
+  font-weight: 100;
+}

@@ -1,0 +1,65 @@
+@import url(Card.css);
+@import url(NewExpenseInput.css);
+@import url(MemberGrid.css);
+@import url(SumDisplay.css);
+@import url(Button.css);
+@import url(Login.css);
+@import url(GroupListItem.css);
+@import url(Loader.css);
+@import url(ExpenseTable.css);
+
+html {
+  /* 62.5% of 16px user agent font size is 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+#root {
+  max-width: 1280px;
+  min-width: 350px;
+  min-height: 100vh;
+  margin: auto;
+
+  --pp-red: #ef476fff;
+  --pp-yellow: #ffd166ff;
+  --pp-green: #06d6a0ff;
+  --pp-blue: #118ab2ff;
+  --pp-dark-green: #073b4cff;
+  --pp-box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+  --pp-box-shadow-light: rgba(0, 0, 0, 0.24) 0rem 0.3rem 0.4rem;
+
+  background-color: var(--pp-dark-green);
+
+  color: white;
+  text-align: center;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+button,
+input {
+  box-shadow: var(--pp-box-shadow);
+  border-radius: 0.8rem;
+}
+
+h1 {
+  font-size: 3.2em;
+}
+
+.layoutContainer {
+  position: relative;
+  padding: 2rem;
+}
+
+.bigSpace {
+  height: 10rem;
+}
+
+.smallSpace {
+  height: 2rem;
+}

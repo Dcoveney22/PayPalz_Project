@@ -1,0 +1,49 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.newExpenseForm {
+  grid-column: span 2;
+  margin: 1.4rem;
+  grid-auto-flow: column;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 0.4rem;
+  column-gap: 0.4rem;
+}
+
+.newExpenseForm > input,
+.newExpenseForm > button {
+  border-radius: 0.4rem;
+  box-shadow: var(--pp-box-shadow-light);
+}
+
+.newExpenseFormInput {
+  border: 0;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.formButton {
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+.submitButton {
+  background-color: var(--pp-yellow);
+}
+
+.formButton:hover {
+  transform: scale(1.05);
+}

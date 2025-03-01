@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import AvailableGroups from './AvailableGroups'
+import GroupView from './GroupView'
 
 export enum ViewMode {
   GroupList,
@@ -19,7 +20,7 @@ export function Authenticated() {
   }
 
   if (viewMode === ViewMode.GroupView) {
-    return <div>GroupView</div>
+    return <GroupView groupID={selectedGroup} setViewMode={setViewMode} />
   }
 }
 

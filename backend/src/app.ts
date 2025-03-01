@@ -49,7 +49,7 @@ app.post('/expense', verifyToken, async (req, res) => {
   res.status(status).json(createdExpense)
 })
 
-app.post('/authenticate', verifyToken, async (req: Request, res: Response) => {
+app.post('/authenticate', async (req: Request, res: Response) => {
   const { username, password } = req.body
 
   const { status, message } = await authService.checkCredentials(

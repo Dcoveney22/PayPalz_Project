@@ -3,8 +3,17 @@ import { Group } from '@jacobjshelp/paypalztypes'
 import { useQuery } from '@tanstack/react-query'
 import GroupListItem from './GroupListItem'
 import { useContextAndErrorIfNull, UserContext } from '../contexts/UserContext'
+import { ViewMode } from './Authenticated'
 
-function AvailableGroups() {
+type AvailableGroupsProps = {
+  setSelectedGroup: React.Dispatch<React.SetStateAction<number>>
+  setViewMode: React.Dispatch<React.SetStateAction<ViewMode>>
+}
+
+function AvailableGroups({
+  setSelectedGroup,
+  setViewMode,
+}: AvailableGroupsProps) {
   const { info } = useContextAndErrorIfNull(UserContext)
 
   const { data, isLoading, isError } = useQuery({
@@ -31,7 +40,8 @@ function AvailableGroups() {
             key={g.id}
             name={g.name}
             onClick={() => {
-              console.log(`Clicked on group ${g.name}`)
+              setSelectedGroup(g.id)
+              setViewMode(ViewMode.GroupView)
             }}
           />
         )

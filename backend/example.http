@@ -1,4 +1,22 @@
+
+
 GET http://localhost:3000/groups?username=user-Jayden
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/expense
+Content-Type: application/json
+
+{
+  "amount": 10,
+  "payerID": 1,
+  "groupID": 1,
+  "description": "More snacks"
+}
+###
+
+GET http://localhost:3000/expenses/1
 Content-Type: application/json
 
 ###

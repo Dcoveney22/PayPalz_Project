@@ -10,7 +10,7 @@ function AvailableGroups() {
   const { data, isLoading, isError } = useQuery({
     queryKey: ['groups'],
     queryFn: () => {
-      if (info) return getGroupsForMember(info.username)
+      if (info) return getGroupsForMember(info.username, info.token)
     },
   })
 

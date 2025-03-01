@@ -1,5 +1,9 @@
+import AuthService from '../src/services/AuthService'
 import prisma from './PrismaClient'
 import 'dotenv/config'
+
+const jwtSecret = process.env.JWT_SECRET
+const authService = new AuthService(jwtSecret)
 
 async function insertMembers() {
   const memberNames = ['Jayden', 'Remi', 'Charlie', 'Cameron', 'Jesse']
@@ -8,7 +12,7 @@ async function insertMembers() {
     const user = await prisma.member.create({
       data: {
         name: name,
-        hashed_password: `user-${name}`,
+        hashed_password: await authService.hashPassword(`user-${name}`),
         username: `user-${name}`,
       },
     })

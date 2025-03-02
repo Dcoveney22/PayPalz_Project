@@ -1,4 +1,5 @@
 import { GroupMember } from '@jacobjshelp/paypalztypes'
+import AddExpenseButton from './AddExpenseButton'
 
 type CardProps = {
   memberData: GroupMember
@@ -32,6 +33,7 @@ export default function Card({
           style={{ color: sumColor }}
         >{`${memberData.value.toFixed(2)}$`}</span>
       </div>
+      <AddExpenseButton memberID={memberData.id} groupID={groupID} />
     </div>
   )
 }

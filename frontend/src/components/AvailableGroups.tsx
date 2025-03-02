@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query'
 import GroupListItem from './GroupListItem'
 import { useContextAndErrorIfNull, UserContext } from '../contexts/UserContext'
 import { ViewMode } from './Authenticated'
+import Loader from './Loader'
 
 type AvailableGroupsProps = {
   setSelectedGroup: React.Dispatch<React.SetStateAction<number>>
@@ -28,7 +29,11 @@ function AvailableGroups({
   }
 
   if (isLoading) {
-    return <div>Loading...</div>
+    return (
+      <div>
+        <Loader />
+      </div>
+    )
   }
 
   return (
